@@ -14,6 +14,8 @@ phpfpm:
         - '9000:9000'
     volumes:
         - ./public:/myapps
+    links:
+        - mysql
 mysql:
     image: 'mariadb'
     ports:
